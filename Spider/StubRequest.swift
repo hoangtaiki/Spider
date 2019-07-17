@@ -12,7 +12,7 @@ public struct StubRequest: Hashable {
 
     public let url: URL
     public let method: HTTPMethod
-    public let headers: HTTPHeaders = [:]
+    public var headers: HTTPHeaders = [:]
     public let body: Data?
     public let response: StubResponse
 
@@ -21,9 +21,10 @@ public struct StubRequest: Hashable {
     /// - Parameters:
     ///   - method: The `HTTPMethod` to match
     ///   - url: The `URL` to match
-    public init(url: URL, method: HTTPMethod, body: Data? = nil, response: StubResponse) {
+    public init(url: URL, method: HTTPMethod, headers: HTTPHeaders = [:], body: Data? = nil, response: StubResponse) {
         self.url = url
         self.method = method
+        self.headers = headers
         self.body = body
         self.response = response
     }

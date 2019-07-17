@@ -22,7 +22,7 @@ public struct StubResponse: StubResponseType {
     public var body: Data?
     public var error: NSError?
     
-    public init(statusCode: Int = 200, headers: HTTPHeaders = [:], body: Data) {
+    public init(statusCode: Int = 200, headers: HTTPHeaders = [:], body: Data? = nil) {
         self.statusCode = statusCode
         self.headers = headers
         self.body = body

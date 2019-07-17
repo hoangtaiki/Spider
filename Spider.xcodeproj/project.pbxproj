@@ -104,8 +104,8 @@
 		9993F61122DEB48300ABFE02 /* SpiderTests */ = {
 			isa = PBXGroup;
 			children = (
-				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
 				9993F61422DEB48300ABFE02 /* Info.plist */,
+				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
 			);
 			path = SpiderTests;
 			sourceTree = "<group>";
