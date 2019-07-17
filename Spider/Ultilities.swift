@@ -36,12 +36,3 @@ extension HTTPHeaders {
         return true
     }
 }
-
-/// Compare two optional
-func ==<T: Comparable>(lhs: T?, rhs: T?) -> Bool {
-    if let lhs = lhs, let rhs = rhs {
-        return lhs == rhs
-    } else {
-        return lhs == nil && rhs == nil
-    }
-}

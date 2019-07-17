@@ -18,10 +18,6 @@ final class StubURLProtocol: URLProtocol {
         return request
     }
     
-    override class func requestIsCacheEquivalent(_ a: URLRequest, to b: URLRequest) -> Bool {
-        return false
-    }
-    
     override func startLoading() {
         // Get stub response from stub array
         // If not found return not found stub for request

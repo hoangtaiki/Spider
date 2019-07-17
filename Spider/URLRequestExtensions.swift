@@ -18,10 +18,7 @@ public protocol URLRequestType {
 extension URLRequest: URLRequestType {
     
     public var method: HTTPMethod? {
-        guard let method = httpMethod else {
-            return nil
-        }
-        return HTTPMethod(rawValue: method)
+        return HTTPMethod(rawValue: httpMethod!)
     }
     
     public var headers: [String: String]? {

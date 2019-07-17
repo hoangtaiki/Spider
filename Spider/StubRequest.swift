@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct StubRequest: Hashable {
+public struct StubRequest: Equatable {
 
     public let url: URL
     public let method: HTTPMethod
@@ -34,13 +34,6 @@ public struct StubRequest: Hashable {
             && url.absoluteString == request.url?.absoluteString
             && headers == request.headers
             && body == request.body
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(method)
-        hasher.combine(url.absoluteString)
-        hasher.combine(body)
-        hasher.combine(headers)
     }
     
     public static func ==(lhs: StubRequest, rhs: StubRequest) -> Bool {

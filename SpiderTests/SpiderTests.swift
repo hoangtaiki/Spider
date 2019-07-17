@@ -21,7 +21,7 @@ class SpiderTests: XCTestCase {
     
     func testGETRequestWithSuccessResponse() {
         let url = URL(string: "https://www.apple.com")!
-        let body = "{\"value\":\"test\"}".data(using: .utf8)!
+        let body = "{\"value\":\"test\"}".data(using: .utf8)
         let response = StubResponse(body: body)
         let stub = StubRequest(url: url, method: .GET, response: response)
         Spider.default.addStubRequest(stub)
@@ -62,10 +62,10 @@ class SpiderTests: XCTestCase {
     
     func testPOSTRequestWithSuccessResponse() {
         let url = URL(string: "https://www.apple.com")!
-        let responseBody = "{\"value\":\"test\"}".data(using: .utf8)!
+        let responseBody = "{\"value\":\"test\"}".data(using: .utf8)
         let response = StubResponse(body: responseBody)
         let requestParamters: [String: Any] = ["id": 1, "name": "Spider"]
-        let requestBody = try! JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
+        let requestBody = try? JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
         let stub = StubRequest(url: url, method: .POST,
                                headers: ["Content-Type": "application/json"],
                                body: requestBody, response: response)
@@ -94,7 +94,7 @@ class SpiderTests: XCTestCase {
                             userInfo: [NSLocalizedDescriptionKey: "Unauthorized"])
         let response = StubResponse(error: error)
         let requestParamters: [String: Any] = ["id": 1, "name": "Spider"]
-        let requestBody = try! JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
+        let requestBody = try? JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
         let stub = StubRequest(url: url, method: .POST,
                                headers: ["Content-Type": "application/json"],
                                body: requestBody, response: response)
@@ -148,7 +148,7 @@ class SpiderTests: XCTestCase {
     
     func testClearAllStubs() {
         let url = URL(string: "https://www.apple.com")!
-        let body = "{\"value\":\"test\"}".data(using: .utf8)!
+        let body = "{\"value\":\"test\"}".data(using: .utf8)
         let response = StubResponse(body: body)
         // Create GET Stub
         let getStub = StubRequest(url: url, method: .GET, response: response)
@@ -156,11 +156,11 @@ class SpiderTests: XCTestCase {
         
         // Create POST Stub
         let requestParamters: [String: Any] = ["id": 1, "name": "Spider"]
-        let requestBody = try! JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
-        let posStub = StubRequest(url: url, method: .POST,
-                                  headers: ["Content-Type": "application/json"],
-                                  body: requestBody, response: response)
-        Spider.default.addStubRequest(posStub)
+        let requestBody = try? JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
+        let postStub = StubRequest(url: url, method: .POST,
+                                   headers: ["Content-Type": "application/json"],
+                                   body: requestBody, response: response)
+        Spider.default.addStubRequest(postStub)
         
         Spider.default.clearStubs()
         
