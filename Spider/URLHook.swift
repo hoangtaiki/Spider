@@ -8,13 +8,18 @@
 
 import Foundation
 
-final class URLHook {
+public protocol HookType {
+    func load()
+    func unload()
+}
+
+final class URLHook: HookType {
     
     func load() {
-        URLProtocol.registerClass(HTTPStubURLProtocol.self)
+        URLProtocol.registerClass(StubURLProtocol.self)
     }
     
     func unload() {
-        URLProtocol.unregisterClass(HTTPStubURLProtocol.self)
+        URLProtocol.unregisterClass(StubURLProtocol.self)
     }
 }

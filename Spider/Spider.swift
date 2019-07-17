@@ -15,8 +15,8 @@ public class Spider {
     public private(set) var isStarted = false
     public private(set) var stubbedRequests: [StubRequest] = []
     
-    private let urlHook: URLHook
-    private let urlSessionHook: URLSessionHook
+    private let urlHook: HookType
+    private let urlSessionHook: HookType
     
     private init() {
         urlHook = URLHook()
@@ -51,7 +51,7 @@ public class Spider {
         stubbedRequests.removeAll()
     }
     
-    public func response(for request: HTTPRequest) -> StubResponse? {
+    public func response(for request: URLRequestType) -> StubResponse? {
         return stubbedRequests.first(where: { $0.matchesRequest(request) })?.response
     }
 }

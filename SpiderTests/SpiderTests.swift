@@ -23,7 +23,7 @@ class SpiderTests: XCTestCase {
         let url = URL(string: "http://www.apple.com")!
         let body = "{\"value\":\"test\"}".data(using: .utf8)!
         let response = StubResponse(body: body)
-        let stub = StubRequest(method: .GET, url: url, response: response)
+        let stub = StubRequest(url: url, method: .GET, response: response)
         Spider.default.addStubRequest(stub)
         
         Spider.default.start()

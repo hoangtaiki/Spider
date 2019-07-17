@@ -8,13 +8,14 @@
 
 import Foundation
 
-public protocol HTTPStubResponse {
+public protocol StubResponseType {
     var statusCode: Int { get }
     var headers: HTTPHeaders { get }
     var body: Data? { get }
+    var error: NSError? { get }
 }
 
-public struct StubResponse: HTTPStubResponse {
+public struct StubResponse: StubResponseType {
     
     public let statusCode: Int
     public let headers: HTTPHeaders

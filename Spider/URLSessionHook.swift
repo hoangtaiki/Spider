@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class URLSessionHook {
+final class URLSessionHook: HookType {
     
     func load() {
         guard let method = class_getInstanceMethod(originalClass(), originalSelector()),
@@ -16,6 +16,10 @@ final class URLSessionHook {
                 fatalError("Could not load URLSessionHook")
         }
         method_exchangeImplementations(method, stub)
+    }
+    
+    func unload() {
+        load()
     }
     
     private func originalClass() -> AnyClass? {
@@ -28,10 +32,6 @@ final class URLSessionHook {
     
     @objc
     private func protocolClasses() -> [AnyClass] {
-        return [HTTPStubURLProtocol.self]
-    }
-    
-    func unload() {
-        load()
+        return [StubURLProtocol.self]
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 
 public struct StubRequest: Hashable {
 
-    public let method: HTTPMethod
     public let url: URL
+    public let method: HTTPMethod
     public let headers: HTTPHeaders = [:]
     public let body: Data?
     public let response: StubResponse
@@ -21,14 +21,14 @@ public struct StubRequest: Hashable {
     /// - Parameters:
     ///   - method: The `HTTPMethod` to match
     ///   - url: The `URL` to match
-    public init(method: HTTPMethod, url: URL, body: Data? = nil, response: StubResponse) {
-        self.method = method
+    public init(url: URL, method: HTTPMethod, body: Data? = nil, response: StubResponse) {
         self.url = url
+        self.method = method
         self.body = body
         self.response = response
     }
     
-    public func matchesRequest(_ request: HTTPRequest) -> Bool {
+    public func matchesRequest(_ request: URLRequestType) -> Bool {
         return request.method == method
             && url.absoluteString == request.url?.absoluteString
             && headers == request.headers
@@ -49,5 +49,3 @@ public struct StubRequest: Hashable {
             && lhs.body == rhs.body
     }
 }
-
-

@@ -8,14 +8,14 @@
 
 import Foundation
 
-public protocol HTTPRequest {
+public protocol URLRequestType {
     var url: URL? { get }
     var method: HTTPMethod? { get }
     var headers: [String: String]? { get }
     var body: Data? { get }
 }
 
-extension URLRequest: HTTPRequest {
+extension URLRequest: URLRequestType {
     
     public var method: HTTPMethod? {
         guard let method = httpMethod else {
