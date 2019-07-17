@@ -10,6 +10,14 @@
 		9993F60E22DEB48300ABFE02 /* Spider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9993F60422DEB48200ABFE02 /* Spider.framework */; };
 		9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61222DEB48300ABFE02 /* SpiderTests.swift */; };
 		9993F61522DEB48300ABFE02 /* Spider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9993F60722DEB48200ABFE02 /* Spider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */; };
+		9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61F22DEB49500ABFE02 /* StubResponse.swift */; };
+		9993F62822DEB49600ABFE02 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62022DEB49500ABFE02 /* StubRequest.swift */; };
+		9993F62922DEB49600ABFE02 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62122DEB49500ABFE02 /* HTTPRequest.swift */; };
+		9993F62A22DEB49600ABFE02 /* HTTPStubURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62222DEB49500ABFE02 /* HTTPStubURLProtocol.swift */; };
+		9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62322DEB49500ABFE02 /* URLHook.swift */; };
+		9993F62C22DEB49600ABFE02 /* Ultilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62422DEB49600ABFE02 /* Ultilities.swift */; };
+		9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62522DEB49600ABFE02 /* Spider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,14 @@
 		9993F60D22DEB48300ABFE02 /* SpiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9993F61222DEB48300ABFE02 /* SpiderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderTests.swift; sourceTree = "<group>"; };
 		9993F61422DEB48300ABFE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHook.swift; sourceTree = "<group>"; };
+		9993F61F22DEB49500ABFE02 /* StubResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
+		9993F62022DEB49500ABFE02 /* StubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
+		9993F62122DEB49500ABFE02 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		9993F62222DEB49500ABFE02 /* HTTPStubURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStubURLProtocol.swift; sourceTree = "<group>"; };
+		9993F62322DEB49500ABFE02 /* URLHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHook.swift; sourceTree = "<group>"; };
+		9993F62422DEB49600ABFE02 /* Ultilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ultilities.swift; sourceTree = "<group>"; };
+		9993F62522DEB49600ABFE02 /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +87,16 @@
 		9993F60622DEB48200ABFE02 /* Spider */ = {
 			isa = PBXGroup;
 			children = (
-				9993F60722DEB48200ABFE02 /* Spider.h */,
+				9993F62122DEB49500ABFE02 /* HTTPRequest.swift */,
+				9993F62222DEB49500ABFE02 /* HTTPStubURLProtocol.swift */,
 				9993F60822DEB48200ABFE02 /* Info.plist */,
+				9993F60722DEB48200ABFE02 /* Spider.h */,
+				9993F62522DEB49600ABFE02 /* Spider.swift */,
+				9993F62022DEB49500ABFE02 /* StubRequest.swift */,
+				9993F61F22DEB49500ABFE02 /* StubResponse.swift */,
+				9993F62422DEB49600ABFE02 /* Ultilities.swift */,
+				9993F62322DEB49500ABFE02 /* URLHook.swift */,
+				9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */,
 			);
 			path = Spider;
 			sourceTree = "<group>";
@@ -148,6 +172,7 @@
 				TargetAttributes = {
 					9993F60322DEB48200ABFE02 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					9993F60C22DEB48200ABFE02 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */,
+				9993F62A22DEB49600ABFE02 /* HTTPStubURLProtocol.swift in Sources */,
+				9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */,
+				9993F62922DEB49600ABFE02 /* HTTPRequest.swift in Sources */,
+				9993F62C22DEB49600ABFE02 /* Ultilities.swift in Sources */,
+				9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */,
+				9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */,
+				9993F62822DEB49600ABFE02 /* StubRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +374,7 @@
 		9993F61922DEB48300ABFE02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.Spider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +401,7 @@
 		9993F61A22DEB48300ABFE02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +427,7 @@
 		9993F61C22DEB48300ABFE02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZVUJ9G9RV;
 				INFOPLIST_FILE = SpiderTests/Info.plist;
@@ -409,6 +446,7 @@
 		9993F61D22DEB48300ABFE02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZVUJ9G9RV;
 				INFOPLIST_FILE = SpiderTests/Info.plist;

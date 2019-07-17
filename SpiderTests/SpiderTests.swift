@@ -10,25 +10,39 @@ import XCTest
 @testable import Spider
 
 class SpiderTests: XCTestCase {
-
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        Spider.default.start()
     }
-
+    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        Spider.default.stop()
     }
-
+    
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let url = URL(string: "http://www.apple.com")!
+        let body = "{\"value\":\"test\"}".data(using: .utf8)!
+        let response = StubResponse(body: body)
+        let stub = StubRequest(method: .GET, url: url, response: response)
+        Spider.default.addStubRequest(stub)
+        
+        Spider.default.start()
+        
+        let expectation = self.expectation(description: "Stubs network call")
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { data, res, _ in
+            print(res!)
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                print(json)
+            } catch {
+                print("error")
+            }
+            XCTAssertEqual(data, body)
+            expectation.fulfill()
         }
+        task.resume()
+        
+        wait(for: [expectation], timeout: 1)
     }
-
 }
