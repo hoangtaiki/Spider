@@ -1,0 +1,7 @@
+os: osx
+language: swift
+osx_image: xcode10.2
+script:
+  - xcodebuild -scheme Spider -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'Spider'
