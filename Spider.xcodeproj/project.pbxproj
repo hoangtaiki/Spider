@@ -19,6 +19,8 @@
 		9993F62C22DEB49600ABFE02 /* Ultilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62422DEB49600ABFE02 /* Ultilities.swift */; };
 		9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62522DEB49600ABFE02 /* Spider.swift */; };
 		9993F63122DF2A7500ABFE02 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */; };
+		9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63622DF5E7500ABFE02 /* Matchers.swift */; };
+		9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63A22DF706100ABFE02 /* MatchersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9993F62422DEB49600ABFE02 /* Ultilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ultilities.swift; sourceTree = "<group>"; };
 		9993F62522DEB49600ABFE02 /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersTests.swift; sourceTree = "<group>"; };
+		9993F63622DF5E7500ABFE02 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
+		9993F63A22DF706100ABFE02 /* MatchersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchersTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9993F60822DEB48200ABFE02 /* Info.plist */,
+				9993F63622DF5E7500ABFE02 /* Matchers.swift */,
 				9993F60722DEB48200ABFE02 /* Spider.h */,
 				9993F62522DEB49600ABFE02 /* Spider.swift */,
 				9993F62022DEB49500ABFE02 /* StubRequest.swift */,
@@ -107,8 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				9993F61422DEB48300ABFE02 /* Info.plist */,
-				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
 				9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */,
+				9993F63A22DF706100ABFE02 /* MatchersTests.swift */,
+				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
 			);
 			path = SpiderTests;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 				9993F62C22DEB49600ABFE02 /* Ultilities.swift in Sources */,
 				9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */,
 				9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */,
+				9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */,
 				9993F62822DEB49600ABFE02 /* StubRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */,
 				9993F63122DF2A7500ABFE02 /* HTTPHeadersTests.swift in Sources */,
 				9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */,
 			);
