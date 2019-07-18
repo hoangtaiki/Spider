@@ -9,6 +9,7 @@
 import XCTest
 @testable import Spider
 
+//swiftlint:disable force_try
 final class MatchersTests: XCTestCase {
     
     private let appleURLString = "https://www.apple.com"

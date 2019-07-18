@@ -9,17 +9,7 @@
 import XCTest
 @testable import Spider
 
-extension String {
-    
-    func asURL() -> URL? {
-        return URL(string: self)
-    }
-    
-    func asStringMatcher() -> StringMatcher {
-        return StringMatcher(string: self)
-    }
-}
-
+//swiftlint:disable force_try
 class SpiderTests: XCTestCase {
     
     private let session = URLSession(configuration: .default)
@@ -42,7 +32,7 @@ class SpiderTests: XCTestCase {
         Spider.default.addStubRequest(stub)
         
         let expectation = self.expectation(description: "Stubs network call return success response")
-        let task = session.dataTask(with: appleURLString.asURL()!) { [weak self] data, _, error in
+        let task = session.dataTask(with: appleURLString.asURL()!) { [weak self] data, _, _ in
             XCTAssertEqual(data, self?.responseBody)
             expectation.fulfill()
         }
@@ -90,7 +80,7 @@ class SpiderTests: XCTestCase {
         request.httpBody = requestBody
         
         let expectation = self.expectation(description: "Stubs network call return success response")
-        let task = session.dataTask(with: request) { [weak self] data, _, error in
+        let task = session.dataTask(with: request) { [weak self] data, _, _ in
             XCTAssertEqual(data, self?.responseBody)
             expectation.fulfill()
         }
@@ -143,7 +133,7 @@ class SpiderTests: XCTestCase {
         Spider.default.addStubRequest(stub)
         
         let expectation = self.expectation(description: "Stubs network call return success response")
-        let task = session.dataTask(with: url) { [weak self] data, _, error in
+        let task = session.dataTask(with: url) { [weak self] data, _, _ in
             XCTAssertEqual(data, self?.responseBody)
             expectation.fulfill()
         }

@@ -21,6 +21,7 @@
 		9993F63122DF2A7500ABFE02 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */; };
 		9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63622DF5E7500ABFE02 /* Matchers.swift */; };
 		9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63A22DF706100ABFE02 /* MatchersTests.swift */; };
+		99B74B4A22E0153100F1B53C /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B74B4822E014FD00F1B53C /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersTests.swift; sourceTree = "<group>"; };
 		9993F63622DF5E7500ABFE02 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		9993F63A22DF706100ABFE02 /* MatchersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchersTests.swift; sourceTree = "<group>"; };
+		99B74B4822E014FD00F1B53C /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +95,9 @@
 		9993F60622DEB48200ABFE02 /* Spider */ = {
 			isa = PBXGroup;
 			children = (
+				9993F60722DEB48200ABFE02 /* Spider.h */,
 				9993F60822DEB48200ABFE02 /* Info.plist */,
 				9993F63622DF5E7500ABFE02 /* Matchers.swift */,
-				9993F60722DEB48200ABFE02 /* Spider.h */,
 				9993F62522DEB49600ABFE02 /* Spider.swift */,
 				9993F62022DEB49500ABFE02 /* StubRequest.swift */,
 				9993F61F22DEB49500ABFE02 /* StubResponse.swift */,
@@ -115,6 +117,7 @@
 				9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */,
 				9993F63A22DF706100ABFE02 /* MatchersTests.swift */,
 				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
+				99B74B4822E014FD00F1B53C /* StringExtensions.swift */,
 			);
 			path = SpiderTests;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				9993F60022DEB48200ABFE02 /* Sources */,
 				9993F60122DEB48200ABFE02 /* Frameworks */,
 				9993F60222DEB48200ABFE02 /* Resources */,
+				99B74B4722E013C200F1B53C /* Run Script - SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -223,6 +227,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		99B74B4722E013C200F1B53C /* Run Script - SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9993F60022DEB48200ABFE02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B74B4A22E0153100F1B53C /* StringExtensions.swift in Sources */,
 				9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */,
 				9993F63122DF2A7500ABFE02 /* HTTPHeadersTests.swift in Sources */,
 				9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */,

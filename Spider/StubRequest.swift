@@ -36,7 +36,7 @@ public struct StubRequest: Equatable {
             && matcher.matches(string: request.url?.absoluteString)
     }
     
-    public static func ==(lhs: StubRequest, rhs: StubRequest) -> Bool {
+    public static func == (lhs: StubRequest, rhs: StubRequest) -> Bool {
         return lhs.method == rhs.method
             && lhs.headers == rhs.headers
             && lhs.body == rhs.body
