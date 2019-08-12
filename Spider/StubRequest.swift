@@ -8,11 +8,13 @@
 
 import Foundation
 
+public enum HTTPMethod: String {
+    case GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH
+}
+
 public struct StubRequest: Equatable {
 
     public let method: HTTPMethod
-    public var headers: HTTPHeaders = [:]
-    public let body: Data?
     public let matcher: Matcher
     public let response: StubResponse
 
@@ -21,25 +23,19 @@ public struct StubRequest: Equatable {
     /// - Parameters:
     ///   - method: The `HTTPMethod` to match
     ///   - url: The `URL` to match
-    public init(method: HTTPMethod, headers: HTTPHeaders = [:], body: Data? = nil, matcher: Matcher, response: StubResponse) {
+    public init(method: HTTPMethod, matcher: Matcher, response: StubResponse) {
         self.method = method
-        self.headers = headers
-        self.body = body
         self.matcher = matcher
         self.response = response
     }
     
-    public func matchesRequest(_ request: URLRequestType) -> Bool {
-        return request.method == method
-            && headers == request.headers
-            && body == request.body
+    public func matchesRequest(_ request: URLRequest) -> Bool {
+        return HTTPMethod(rawValue: request.httpMethod!) == method
             && matcher.matches(string: request.url?.absoluteString)
     }
     
     public static func == (lhs: StubRequest, rhs: StubRequest) -> Bool {
         return lhs.method == rhs.method
-            && lhs.headers == rhs.headers
-            && lhs.body == rhs.body
             && lhs.matcher.isEqual(to: rhs.matcher)
     }
 }

@@ -37,6 +37,13 @@
             BlueprintName = "Spider"
             ReferencedContainer = "container:Spider.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9993F60C22DEB48200ABFE02"
+            BuildableName = "SpiderTests.xctest"
+            BlueprintName = "SpiderTests"
+            ReferencedContainer = "container:Spider.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference

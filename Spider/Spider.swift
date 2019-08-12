@@ -51,7 +51,7 @@ public class Spider {
         stubbedRequests.removeAll()
     }
     
-    public func response(for request: URLRequestType) -> StubResponse? {
+    public func response(for request: URLRequest) -> StubResponse? {
         return stubbedRequests.first(where: { $0.matchesRequest(request) })?.response
     }
 }

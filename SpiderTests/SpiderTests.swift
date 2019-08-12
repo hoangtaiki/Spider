@@ -26,8 +26,8 @@ class SpiderTests: XCTestCase {
         Spider.default.stop()
     }
     
-    func testGETRequestWithSuccessResponse() {
-        let response = StubResponse(body: responseBody)
+    func testRequestWithSuccessResponse() {
+        let response = StubResponse.success(200, responseBody!)
         let stub = StubRequest(method: .GET, matcher: appleURLString.asStringMatcher(), response: response)
         Spider.default.addStubRequest(stub)
         
@@ -41,10 +41,10 @@ class SpiderTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
-    func testGETRequestWithFailedResponse() {
+    func testFailedRequestWithNoneDataResponse() {
         let error = NSError(domain: "com.apple.error", code: 0,
                             userInfo: [NSLocalizedDescriptionKey: "Unauthorized"])
-        let response = StubResponse(error: error)
+        let response = StubResponse.failed(422, nil, error)
         let stub = StubRequest(method: .GET, matcher: StringMatcher(string: appleURLString), response: response)
         Spider.default.addStubRequest(stub)
         
@@ -61,60 +61,15 @@ class SpiderTests: XCTestCase {
         
         wait(for: [expectation], timeout: 1)
     }
-
-    func testPOSTRequestWithSuccessResponse() {
-        let response = StubResponse(body: responseBody)
-        let requestParamters: [String: Any] = ["id": 1, "name": "Spider"]
-        let requestBody = try? JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
-        let stub = StubRequest(method: .POST,
-                               headers: ["Content-Type": "application/json"],
-                               body: requestBody,
-                               matcher: StringMatcher(string: appleURLString),
-                               response: response)
+    
+    func testFailedRequestWithDataResponse() {
+        let response = StubResponse.failed(422, responseBody!, nil)
+        let stub = StubRequest(method: .GET, matcher: StringMatcher(string: appleURLString), response: response)
         Spider.default.addStubRequest(stub)
-        
-        // Create request
-        var request = URLRequest(url: appleURLString.asURL()!)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = requestBody
-        
-        let expectation = self.expectation(description: "Stubs network call return success response")
-        let task = session.dataTask(with: request) { [weak self] data, _, _ in
-            XCTAssertEqual(data, self?.responseBody)
-            expectation.fulfill()
-        }
-        task.resume()
-        
-        wait(for: [expectation], timeout: 1)
-    }
-
-    func testPOSTRequestWithFailedResponse() {
-        let error = NSError(domain: "com.apple.error", code: 0,
-                            userInfo: [NSLocalizedDescriptionKey: "Unauthorized"])
-        let response = StubResponse(error: error)
-        let requestParamters: [String: Any] = ["id": 1, "name": "Spider"]
-        let requestBody = try? JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
-        let stub = StubRequest(method: .POST,
-                               headers: ["Content-Type": "application/json"],
-                               body: requestBody,
-                               matcher: StringMatcher(string: appleURLString),
-                               response: response)
-        Spider.default.addStubRequest(stub)
-
-        // Create request
-        var request = URLRequest(url: appleURLString.asURL()!)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = requestBody
         
         let expectation = self.expectation(description: "Stubs network call return error response")
-        let task = session.dataTask(with: request) { _, _, err in
-            guard let networkError = err as NSError? else {
-                XCTFail("Not found error")
-                return
-            }
-            XCTAssertEqual(networkError, error)
+        let task = session.dataTask(with: appleURLString.asURL()!) { [weak self] data, _, _ in
+            XCTAssertEqual(data, self?.responseBody)
             expectation.fulfill()
         }
         task.resume()
@@ -128,7 +83,7 @@ class SpiderTests: XCTestCase {
 
         let urlString = "https://www.apple.com/abc"
         let url = URL(string: urlString)!
-        let response = StubResponse(body: responseBody)
+        let response = StubResponse.success(200, responseBody!)
         let stub = StubRequest(method: .GET, matcher: matcher, response: response)
         Spider.default.addStubRequest(stub)
         
@@ -143,7 +98,7 @@ class SpiderTests: XCTestCase {
     }
     
     func testRequestWithNoStub() {
-        let response = StubResponse(body: responseBody)
+        let response = StubResponse.success(200, responseBody!)
         let stub = StubRequest(method: .GET, matcher: StringMatcher(string: appleURLString), response: response)
         Spider.default.addStubRequest(stub)
 
@@ -164,17 +119,13 @@ class SpiderTests: XCTestCase {
     }
 
     func testClearAllStubs() {
-        let response = StubResponse(body: responseBody)
+        let response = StubResponse.success(200, responseBody!)
         // Create GET Stub
         let getStub = StubRequest(method: .GET, matcher: StringMatcher(string: appleURLString), response: response)
         Spider.default.addStubRequest(getStub)
         
         // Create POST Stub
-        let requestParamters: [String: Any] = ["id": 1, "name": "Spider"]
-        let requestBody = try? JSONSerialization.data(withJSONObject: requestParamters, options: .prettyPrinted)
         let postStub = StubRequest(method: .POST,
-                                   headers: ["Content-Type": "application/json"],
-                                   body: requestBody,
                                    matcher: StringMatcher(string: appleURLString),
                                    response: response)
         Spider.default.addStubRequest(postStub)

@@ -6,10 +6,8 @@
 //  Copyright © 2019 Harry Tran. All rights reserved.
 //
 
-import Foundation
-
 final class StubURLProtocol: URLProtocol {
-
+    
     override class func canInit(with request: URLRequest) -> Bool {
         return request.url != nil
     }
@@ -28,26 +26,36 @@ final class StubURLProtocol: URLProtocol {
             return
         }
         
-        // Return success response
-        if let data = stubResponse.body {
-            let response = HTTPURLResponse(url: request.url!, statusCode: stubResponse.statusCode,
-                                           httpVersion: nil, headerFields: stubResponse.headers)!
-            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
-            client?.urlProtocol(self, didLoad: data)
-            client?.urlProtocolDidFinishLoading(self)
-        }
-        
-        // Return error response
-        if let error = stubResponse.error {
+        switch stubResponse {
+        case let .success(statusCode, data):
+            sendResponseData(data, statusCode: statusCode)
+        case let .failed(statusCode, data, error):
+            if let responseData = data {
+                sendResponseData(responseData, statusCode: statusCode)
+                return
+            } else if let responseError = error {
+                sensendResponseError(responseError)
+            }
+            
+            let error = NSError(domain: NSExceptionName.internalInconsistencyException.rawValue, code: 0,
+                                userInfo: [NSLocalizedDescriptionKey: "Failed response dont contain any data or error"])
             client?.urlProtocol(self, didFailWithError: error)
         }
-        
-        let error = NSError(domain: NSExceptionName.internalInconsistencyException.rawValue, code: 0,
-                            userInfo: [NSLocalizedDescriptionKey: "Not found error for stub"])
-        client?.urlProtocol(self, didFailWithError: error)
     }
     
     override func stopLoading() {
+        
+    }
     
+    private func sendResponseData(_ data: Data, statusCode: Int) {
+        let response = HTTPURLResponse(url: request.url!, statusCode: statusCode,
+                                       httpVersion: nil, headerFields: request.allHTTPHeaderFields)!
+        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+        client?.urlProtocol(self, didLoad: data)
+        client?.urlProtocolDidFinishLoading(self)
+    }
+    
+    private func sensendResponseError(_ error: Error) {
+        client?.urlProtocol(self, didFailWithError: error)
     }
 }

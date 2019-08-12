@@ -13,12 +13,9 @@
 		9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */; };
 		9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61F22DEB49500ABFE02 /* StubResponse.swift */; };
 		9993F62822DEB49600ABFE02 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62022DEB49500ABFE02 /* StubRequest.swift */; };
-		9993F62922DEB49600ABFE02 /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62122DEB49500ABFE02 /* URLRequestExtensions.swift */; };
 		9993F62A22DEB49600ABFE02 /* StubURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */; };
 		9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62322DEB49500ABFE02 /* URLHook.swift */; };
-		9993F62C22DEB49600ABFE02 /* Ultilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62422DEB49600ABFE02 /* Ultilities.swift */; };
 		9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62522DEB49600ABFE02 /* Spider.swift */; };
-		9993F63122DF2A7500ABFE02 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */; };
 		9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63622DF5E7500ABFE02 /* Matchers.swift */; };
 		9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63A22DF706100ABFE02 /* MatchersTests.swift */; };
 		99B74B4A22E0153100F1B53C /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B74B4822E014FD00F1B53C /* StringExtensions.swift */; };
@@ -44,12 +41,9 @@
 		9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHook.swift; sourceTree = "<group>"; };
 		9993F61F22DEB49500ABFE02 /* StubResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
 		9993F62022DEB49500ABFE02 /* StubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
-		9993F62122DEB49500ABFE02 /* URLRequestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtensions.swift; sourceTree = "<group>"; };
 		9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubURLProtocol.swift; sourceTree = "<group>"; };
 		9993F62322DEB49500ABFE02 /* URLHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHook.swift; sourceTree = "<group>"; };
-		9993F62422DEB49600ABFE02 /* Ultilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ultilities.swift; sourceTree = "<group>"; };
 		9993F62522DEB49600ABFE02 /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
-		9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersTests.swift; sourceTree = "<group>"; };
 		9993F63622DF5E7500ABFE02 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		9993F63A22DF706100ABFE02 /* MatchersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchersTests.swift; sourceTree = "<group>"; };
 		99B74B4822E014FD00F1B53C /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -102,9 +96,7 @@
 				9993F62022DEB49500ABFE02 /* StubRequest.swift */,
 				9993F61F22DEB49500ABFE02 /* StubResponse.swift */,
 				9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */,
-				9993F62422DEB49600ABFE02 /* Ultilities.swift */,
 				9993F62322DEB49500ABFE02 /* URLHook.swift */,
-				9993F62122DEB49500ABFE02 /* URLRequestExtensions.swift */,
 				9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */,
 			);
 			path = Spider;
@@ -114,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				9993F61422DEB48300ABFE02 /* Info.plist */,
-				9993F63022DF2A7500ABFE02 /* HTTPHeadersTests.swift */,
 				9993F63A22DF706100ABFE02 /* MatchersTests.swift */,
 				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
 				99B74B4822E014FD00F1B53C /* StringExtensions.swift */,
@@ -198,6 +189,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9993F5FA22DEB48200ABFE02;
 			productRefGroup = 9993F60522DEB48200ABFE02 /* Products */;
@@ -256,8 +248,6 @@
 				9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */,
 				9993F62A22DEB49600ABFE02 /* StubURLProtocol.swift in Sources */,
 				9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */,
-				9993F62922DEB49600ABFE02 /* URLRequestExtensions.swift in Sources */,
-				9993F62C22DEB49600ABFE02 /* Ultilities.swift in Sources */,
 				9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */,
 				9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */,
 				9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */,
@@ -271,7 +261,6 @@
 			files = (
 				99B74B4A22E0153100F1B53C /* StringExtensions.swift in Sources */,
 				9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */,
-				9993F63122DF2A7500ABFE02 /* HTTPHeadersTests.swift in Sources */,
 				9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
