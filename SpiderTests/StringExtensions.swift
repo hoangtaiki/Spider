@@ -9,7 +9,7 @@
 import Foundation
 @testable import Spider
 
-extension String {
+public extension String {
     
     func asURL() -> URL? {
         return URL(string: self)
