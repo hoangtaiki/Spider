@@ -8,12 +8,12 @@
 
 import Foundation
 
-public enum HTTPMethod: String {
-    case GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH
-}
-
 public struct StubRequest: Equatable {
 
+    public enum HTTPMethod: String {
+        case GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH
+    }
+    
     public let method: HTTPMethod
     public let matcher: Matcher
     public let response: StubResponse
