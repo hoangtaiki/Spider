@@ -49,12 +49,13 @@ Run `carthage update` to build the framework and drag the built `Spider.framewor
 
 To stub a request, first you need to create a `StubRequest` and `StubResponse`. Then you need add this stub with Spider and tell it to intercept network requests by calling the `start()` method.
 
-### Create a stub request with absolute url
+### Create a stub for successful request with absolute url
 ```
 let url = "https://www.apple.com"
 let matcher = url.asStringMatcher()
+
 let responseBody = "{\"value\":\"test\"}".data(using: .utf8)
-let response = StubResponse(body: responseBody)
+let response = StubResponse.success(200, responseBody!)
 let request = StubRequest(method: .GET, matcher: matcher, response: response)
 Spider.default.addStubRequest(request)
 Spider.default.start()
@@ -69,7 +70,7 @@ let regex = try! NSRegularExpression(pattern: appleURLString, options: [])
 let matcher = RegexMatcher(regex: regex)
 
 let responseBody = "{\"value\":\"test\"}".data(using: .utf8)
-let response = StubResponse(body: responseBody)
+let response = StubResponse.success(200, responseBody!)
 let request = StubRequest(method: .GET, matcher: matcher, response: response)
 Spider.default.addStubRequest(request)
 Spider.default.start()
@@ -77,6 +78,32 @@ Spider.default.start()
 
 This request will accept any request start with `https://www.apple.com`. Example: `https://www.apple.com/home` and `https://www.apple.com/users/1`
 
+### Create a stub for failed request with error
+```
+let url = "https://www.apple.com"
+let matcher = url.asStringMatcher()
+
+let error = NSError(domain: "com.apple.error", code: 0,
+                    userInfo: [NSLocalizedDescriptionKey: "Unauthorized"])
+let response = StubResponse.failed(422, nil, error)
+let request = StubRequest(method: .GET, matcher: matcher, response: response)
+Spider.default.addStubRequest(request)
+Spider.default.start()
+```
+
+### Create a stub for failed request with response data
+```
+let url = "https://www.apple.com"
+let matcher = url.asStringMatcher()
+
+let responseBody = "{\"value\":\"test\"}".data(using: .utf8)
+let response = StubResponse.failed(422, responseBody, nil)
+let request = StubRequest(method: .GET, matcher: matcher, response: response)
+Spider.default.addStubRequest(request)
+Spider.default.start()
+```
+
+This request will only accept url has `absoluteString` is `https://www.apple.com`
 
 ## Contributing
 
