@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import Spider
 
 public extension String {
     

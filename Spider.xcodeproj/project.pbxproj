@@ -18,7 +18,7 @@
 		9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62522DEB49600ABFE02 /* Spider.swift */; };
 		9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63622DF5E7500ABFE02 /* Matchers.swift */; };
 		9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63A22DF706100ABFE02 /* MatchersTests.swift */; };
-		99B74B4A22E0153100F1B53C /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B74B4822E014FD00F1B53C /* StringExtensions.swift */; };
+		99AF29AB230148A300E77395 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B74B4822E014FD00F1B53C /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +98,7 @@
 				9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */,
 				9993F62322DEB49500ABFE02 /* URLHook.swift */,
 				9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */,
+				99B74B4822E014FD00F1B53C /* StringExtensions.swift */,
 			);
 			path = Spider;
 			sourceTree = "<group>";
@@ -108,7 +109,6 @@
 				9993F61422DEB48300ABFE02 /* Info.plist */,
 				9993F63A22DF706100ABFE02 /* MatchersTests.swift */,
 				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
-				99B74B4822E014FD00F1B53C /* StringExtensions.swift */,
 			);
 			path = SpiderTests;
 			sourceTree = "<group>";
@@ -245,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99AF29AB230148A300E77395 /* StringExtensions.swift in Sources */,
 				9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */,
 				9993F62A22DEB49600ABFE02 /* StubURLProtocol.swift in Sources */,
 				9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */,
@@ -259,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B74B4A22E0153100F1B53C /* StringExtensions.swift in Sources */,
 				9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */,
 				9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */,
 			);
