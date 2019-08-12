@@ -50,11 +50,7 @@ class SpiderTests: XCTestCase {
         
         let expectation = self.expectation(description: "Stubs network call return error response")
         let task = session.dataTask(with: appleURLString.asURL()!) { _, _, err in
-            guard let networkError = err as NSError? else {
-                XCTFail("Not found error")
-                return
-            }
-            XCTAssertEqual(networkError, error)
+            XCTAssertEqual(err as NSError?, error)
             expectation.fulfill()
         }
         task.resume()
@@ -106,11 +102,7 @@ class SpiderTests: XCTestCase {
                             userInfo: [NSLocalizedDescriptionKey: "Handling request without a matching stub."])
         let expectation = self.expectation(description: "Stubs network call return error response")
         let task = session.dataTask(with: googleURLString.asURL()!) { _, _, err in
-            guard let networkError = err as NSError? else {
-                XCTFail("Not found error")
-                return
-            }
-            XCTAssertEqual(networkError, error)
+            XCTAssertEqual(err as NSError?, error)
             expectation.fulfill()
         }
         task.resume()
