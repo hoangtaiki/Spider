@@ -9,7 +9,7 @@
 import XCTest
 @testable import Spider
 
-//swiftlint:disable force_try
+// swiftlint:disable force_try
 final class MatchersTests: XCTestCase {
     
     private let appleURLString = "https://www.apple.com"
@@ -62,4 +62,13 @@ final class MatchersTests: XCTestCase {
         let matcher = StringMatcher(string: appleURLString)
         XCTAssert(matcher.matches(string: urlString))
     }
+    
+    static var allTests = [
+        ("testCompareTwoRegexMatchers", testCompareTwoRegexMatchers),
+        ("testCompareRegexMatcherAndStringMatcher", testCompareRegexMatcherAndStringMatcher),
+        ("testStringMatchWithRegex", testStringMatchWithRegex),
+        ("testCompareTwoStringMatchers", testCompareTwoStringMatchers),
+        ("testCompareStringMatcherAndRegexMatcher", testCompareStringMatcherAndRegexMatcher),
+        ("testStringMatchStringMatcher", testStringMatchStringMatcher)
+    ]
 }

@@ -6,6 +6,8 @@
 //  Copyright © 2019 Harry Tran. All rights reserved.
 //
 
+import Foundation
+
 final class StubURLProtocol: URLProtocol {
     
     override class func canInit(with request: URLRequest) -> Bool {

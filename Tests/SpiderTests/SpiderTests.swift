@@ -1,19 +1,10 @@
-//
-//  SpiderTests.swift
-//  SpiderTests
-//
-//  Created by Harry Tran on 7/17/19.
-//  Copyright © 2019 Harry Tran. All rights reserved.
-//
-
 import XCTest
 @testable import Spider
 
-//swiftlint:disable force_try
-class SpiderTests: XCTestCase {
+// swiftlint:disable force_try
+final class SpiderTests: XCTestCase {
     
     private let session = URLSession(configuration: .default)
-
     private let appleURLString = "https://www.apple.com"
     private let googleURLString = "https://www.google.com"
     private let responseBody = "{\"value\":\"test\"}".data(using: .utf8)
@@ -126,4 +117,13 @@ class SpiderTests: XCTestCase {
         
         XCTAssert(Spider.default.stubbedRequests.isEmpty)
     }
+
+    static var allTests = [
+        ("testRequestWithSuccessResponse", testRequestWithSuccessResponse),
+        ("testFailedRequestWithNoneDataResponse", testFailedRequestWithNoneDataResponse),
+        ("testFailedRequestWithDataResponse", testFailedRequestWithDataResponse),
+        ("testRequestWithRegexMatcher", testRequestWithRegexMatcher),
+        ("testRequestWithNoStub", testRequestWithNoStub),
+        ("testClearAllStubs", testClearAllStubs)
+    ]
 }

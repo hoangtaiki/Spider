@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990BB6F52393451A00FA47DF /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6ED2393451A00FA47DF /* Spider.swift */; };
+		990BB6F62393451A00FA47DF /* URLSessionHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6EE2393451A00FA47DF /* URLSessionHook.swift */; };
+		990BB6F72393451A00FA47DF /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6EF2393451A00FA47DF /* StubResponse.swift */; };
+		990BB6F82393451A00FA47DF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6F02393451A00FA47DF /* StringExtensions.swift */; };
+		990BB6F92393451A00FA47DF /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6F12393451A00FA47DF /* Matchers.swift */; };
+		990BB6FA2393451A00FA47DF /* StubURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6F22393451A00FA47DF /* StubURLProtocol.swift */; };
+		990BB6FB2393451A00FA47DF /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6F32393451A00FA47DF /* StubRequest.swift */; };
+		990BB6FC2393451A00FA47DF /* URLHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB6F42393451A00FA47DF /* URLHook.swift */; };
+		990BB7042393452B00FA47DF /* SpiderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB7002393452B00FA47DF /* SpiderTests.swift */; };
+		990BB7052393452B00FA47DF /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB7012393452B00FA47DF /* XCTestManifests.swift */; };
+		990BB7062393452B00FA47DF /* MatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990BB7022393452B00FA47DF /* MatchersTests.swift */; };
+		998809FA239346890055ADA5 /* Spider.h in Headers */ = {isa = PBXBuildFile; fileRef = 998809F8239346890055ADA5 /* Spider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9993F60E22DEB48300ABFE02 /* Spider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9993F60422DEB48200ABFE02 /* Spider.framework */; };
-		9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61222DEB48300ABFE02 /* SpiderTests.swift */; };
-		9993F61522DEB48300ABFE02 /* Spider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9993F60722DEB48200ABFE02 /* Spider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */; };
-		9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F61F22DEB49500ABFE02 /* StubResponse.swift */; };
-		9993F62822DEB49600ABFE02 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62022DEB49500ABFE02 /* StubRequest.swift */; };
-		9993F62A22DEB49600ABFE02 /* StubURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */; };
-		9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62322DEB49500ABFE02 /* URLHook.swift */; };
-		9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F62522DEB49600ABFE02 /* Spider.swift */; };
-		9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63622DF5E7500ABFE02 /* Matchers.swift */; };
-		9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993F63A22DF706100ABFE02 /* MatchersTests.swift */; };
-		99AF29AB230148A300E77395 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B74B4822E014FD00F1B53C /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,21 +33,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990BB6ED2393451A00FA47DF /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
+		990BB6EE2393451A00FA47DF /* URLSessionHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHook.swift; sourceTree = "<group>"; };
+		990BB6EF2393451A00FA47DF /* StubResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
+		990BB6F02393451A00FA47DF /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		990BB6F12393451A00FA47DF /* Matchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
+		990BB6F22393451A00FA47DF /* StubURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubURLProtocol.swift; sourceTree = "<group>"; };
+		990BB6F32393451A00FA47DF /* StubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
+		990BB6F42393451A00FA47DF /* URLHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHook.swift; sourceTree = "<group>"; };
+		990BB7002393452B00FA47DF /* SpiderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderTests.swift; sourceTree = "<group>"; };
+		990BB7012393452B00FA47DF /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		990BB7022393452B00FA47DF /* MatchersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchersTests.swift; sourceTree = "<group>"; };
+		998809F7239346890055ADA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		998809F8239346890055ADA5 /* Spider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spider.h; sourceTree = "<group>"; };
+		998809FB239346C80055ADA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
 		9993F60422DEB48200ABFE02 /* Spider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9993F60722DEB48200ABFE02 /* Spider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spider.h; sourceTree = "<group>"; };
-		9993F60822DEB48200ABFE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9993F60D22DEB48300ABFE02 /* SpiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9993F61222DEB48300ABFE02 /* SpiderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderTests.swift; sourceTree = "<group>"; };
-		9993F61422DEB48300ABFE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHook.swift; sourceTree = "<group>"; };
-		9993F61F22DEB49500ABFE02 /* StubResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
-		9993F62022DEB49500ABFE02 /* StubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
-		9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubURLProtocol.swift; sourceTree = "<group>"; };
-		9993F62322DEB49500ABFE02 /* URLHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHook.swift; sourceTree = "<group>"; };
-		9993F62522DEB49600ABFE02 /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
-		9993F63622DF5E7500ABFE02 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
-		9993F63A22DF706100ABFE02 /* MatchersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchersTests.swift; sourceTree = "<group>"; };
-		99B74B4822E014FD00F1B53C /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +70,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990BB6EB2393451A00FA47DF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				990BB6EC2393451A00FA47DF /* Spider */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		990BB6EC2393451A00FA47DF /* Spider */ = {
+			isa = PBXGroup;
+			children = (
+				998809F7239346890055ADA5 /* Info.plist */,
+				990BB6F12393451A00FA47DF /* Matchers.swift */,
+				998809F8239346890055ADA5 /* Spider.h */,
+				990BB6ED2393451A00FA47DF /* Spider.swift */,
+				990BB6F02393451A00FA47DF /* StringExtensions.swift */,
+				990BB6F32393451A00FA47DF /* StubRequest.swift */,
+				990BB6EF2393451A00FA47DF /* StubResponse.swift */,
+				990BB6F22393451A00FA47DF /* StubURLProtocol.swift */,
+				990BB6F42393451A00FA47DF /* URLHook.swift */,
+				990BB6EE2393451A00FA47DF /* URLSessionHook.swift */,
+			);
+			path = Spider;
+			sourceTree = "<group>";
+		};
+		990BB6FD2393452B00FA47DF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				990BB6FF2393452B00FA47DF /* SpiderTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		990BB6FF2393452B00FA47DF /* SpiderTests */ = {
+			isa = PBXGroup;
+			children = (
+				998809FB239346C80055ADA5 /* Info.plist */,
+				990BB7002393452B00FA47DF /* SpiderTests.swift */,
+				990BB7012393452B00FA47DF /* XCTestManifests.swift */,
+				990BB7022393452B00FA47DF /* MatchersTests.swift */,
+			);
+			path = SpiderTests;
+			sourceTree = "<group>";
+		};
 		9993F5FA22DEB48200ABFE02 = {
 			isa = PBXGroup;
 			children = (
-				9993F60622DEB48200ABFE02 /* Spider */,
-				9993F61122DEB48300ABFE02 /* SpiderTests */,
+				990BB6FD2393452B00FA47DF /* Tests */,
+				990BB6EB2393451A00FA47DF /* Sources */,
 				9993F60522DEB48200ABFE02 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,33 +132,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9993F60622DEB48200ABFE02 /* Spider */ = {
-			isa = PBXGroup;
-			children = (
-				9993F60722DEB48200ABFE02 /* Spider.h */,
-				9993F60822DEB48200ABFE02 /* Info.plist */,
-				9993F63622DF5E7500ABFE02 /* Matchers.swift */,
-				9993F62522DEB49600ABFE02 /* Spider.swift */,
-				9993F62022DEB49500ABFE02 /* StubRequest.swift */,
-				9993F61F22DEB49500ABFE02 /* StubResponse.swift */,
-				9993F62222DEB49500ABFE02 /* StubURLProtocol.swift */,
-				9993F62322DEB49500ABFE02 /* URLHook.swift */,
-				9993F61E22DEB49500ABFE02 /* URLSessionHook.swift */,
-				99B74B4822E014FD00F1B53C /* StringExtensions.swift */,
-			);
-			path = Spider;
-			sourceTree = "<group>";
-		};
-		9993F61122DEB48300ABFE02 /* SpiderTests */ = {
-			isa = PBXGroup;
-			children = (
-				9993F61422DEB48300ABFE02 /* Info.plist */,
-				9993F63A22DF706100ABFE02 /* MatchersTests.swift */,
-				9993F61222DEB48300ABFE02 /* SpiderTests.swift */,
-			);
-			path = SpiderTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -120,7 +139,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9993F61522DEB48300ABFE02 /* Spider.h in Headers */,
+				998809FA239346890055ADA5 /* Spider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99AF29AB230148A300E77395 /* StringExtensions.swift in Sources */,
-				9993F62B22DEB49600ABFE02 /* URLHook.swift in Sources */,
-				9993F62A22DEB49600ABFE02 /* StubURLProtocol.swift in Sources */,
-				9993F62722DEB49600ABFE02 /* StubResponse.swift in Sources */,
-				9993F62622DEB49600ABFE02 /* URLSessionHook.swift in Sources */,
-				9993F62D22DEB49600ABFE02 /* Spider.swift in Sources */,
-				9993F63722DF5E7500ABFE02 /* Matchers.swift in Sources */,
-				9993F62822DEB49600ABFE02 /* StubRequest.swift in Sources */,
+				990BB6F82393451A00FA47DF /* StringExtensions.swift in Sources */,
+				990BB6F72393451A00FA47DF /* StubResponse.swift in Sources */,
+				990BB6F92393451A00FA47DF /* Matchers.swift in Sources */,
+				990BB6F52393451A00FA47DF /* Spider.swift in Sources */,
+				990BB6FC2393451A00FA47DF /* URLHook.swift in Sources */,
+				990BB6F62393451A00FA47DF /* URLSessionHook.swift in Sources */,
+				990BB6FA2393451A00FA47DF /* StubURLProtocol.swift in Sources */,
+				990BB6FB2393451A00FA47DF /* StubRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9993F63B22DF706100ABFE02 /* MatchersTests.swift in Sources */,
-				9993F61322DEB48300ABFE02 /* SpiderTests.swift in Sources */,
+				990BB7062393452B00FA47DF /* MatchersTests.swift in Sources */,
+				990BB7042393452B00FA47DF /* SpiderTests.swift in Sources */,
+				990BB7052393452B00FA47DF /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +429,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Spider/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Spider/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,7 +458,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Spider/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Spider/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,7 +481,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZVUJ9G9RV;
-				INFOPLIST_FILE = SpiderTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +500,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZVUJ9G9RV;
-				INFOPLIST_FILE = SpiderTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

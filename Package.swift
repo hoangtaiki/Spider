@@ -5,24 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "Spider",
-    platforms: [.macOS(.v10_12),
-                .iOS(.v10),
-                .tvOS(.v10),
-                .watchOS(.v3)
-    ],
     products: [
-        .library(
-            name: "Spider",
-            targets: ["Spider"])
+        .library(name: "Spider", targets: ["Spider"])
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
-        .target(
-            name: "Spider",
-            dependencies: []),
-        .testTarget(
-            name: "SpiderTests",
-            dependencies: ["Spider"])
+        .target(name: "Spider", dependencies: []),
+        .testTarget(name: "SpiderTests", dependencies: ["Spider"])
     ]
 )
