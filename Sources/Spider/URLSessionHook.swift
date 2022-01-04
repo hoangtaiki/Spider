@@ -23,7 +23,7 @@ final class URLSessionHook: HookType {
     }
     
     private func originalClass() -> AnyClass? {
-        return NSClassFromString("__NSCFURLSessionConfiguration")
+        return NSClassFromString("__NSCFURLSessionConfiguration") ?? NSClassFromString("NSURLSessionConfiguration")
     }
     
     private func originalSelector() -> Selector {
